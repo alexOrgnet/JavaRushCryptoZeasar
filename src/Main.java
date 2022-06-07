@@ -14,7 +14,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int variant = sc.nextInt();
 
-        String text_to_decode = FileRead.read("C:\\Users\\HP\\Downloads\\Encodedtext.txt");
+        String text_to_decode = FileRead.read("C:\\Encodedtext.txt");
 
         //строим командное меню
         switch (variant) {
@@ -28,7 +28,7 @@ public class Main {
 
                 //сохраняем файл с первичным текстом
 
-                FileSave.save("C:\\Users\\HP\\Downloads\\Plaintext.txt", plain_text);
+                FileSave.save("C:\\Plaintext.txt", plain_text);
 
                 //здесь вводим ключ с помощью которого закодируем текст
                 System.out.println("Введите ключ шифра в виде целого числа для шифрования текста");
@@ -36,7 +36,7 @@ public class Main {
 
                 //здесь кодируем текст и сохраняем его в файл
                 String encrypted_text = Encode.encodes(plain_text, code);
-                FileSave.save("C:\\Users\\HP\\Downloads\\Encodedtext.txt", encrypted_text);
+                FileSave.save("C:\\Encodedtext.txt", encrypted_text);
                 System.out.println("Вы закодировали текст в следующий шифр -> " + encrypted_text);
                 break;
 
@@ -54,7 +54,7 @@ public class Main {
 
                     String decoded_text = Decode.decodes(text_to_decode, key_input);
 
-                    String text_from_file = FileRead.read("C:\\Users\\HP\\Downloads\\Plaintext.txt");
+                    String text_from_file = FileRead.read("C:\\Plaintext.txt");
 
                     if (decoded_text.equals(text_from_file)) {
                         System.out.println("Вы успешно декодировали текст в следующее содержание " + decoded_text);
@@ -80,7 +80,7 @@ public class Main {
 
                     String decoded_text = Decode.decodes(text_to_decode, key_input);
 
-                    String text_from_file = FileRead.read("C:\\Users\\HP\\Downloads\\Plaintext.txt");
+                    String text_from_file = FileRead.read("C:\\Plaintext.txt");
 
                     if (decoded_text.equals(text_from_file)) {
                         System.out.println("Вы успешно декодировали текст в следующее содержание " + decoded_text);
