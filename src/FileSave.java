@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class FileSave {
 
-    public static void save(String file_path, String text_to_process)  throws IOException {
+    public static void save(String file_path, String text_to_process) throws IOException {
 
         FileWriter writer = new FileWriter(file_path, false);
 
